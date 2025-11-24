@@ -1,0 +1,36 @@
+SISTEMA DE GESTIÓN BIBLIOTECARIA
+
+DESCRIPCIÓN DEL PROYECTO
+Este sistema busca permitir la gesstión de prestamos de libros en una bibliotecaa universitaria.
+Está diseñado con un enfoque robuste en la tolerancia a fallos, implementando un amenjo
+exhaustivo de excepciones y asesciones para depuración.
+
+
+Integrantes del Equipo:
+FELIPE BALAN XAMÁN
+
+FUNCIONALIDADES
+Registro de libros con validación de datos no vacíos y copias positivas
+Registro de prestamos, gestión de stock y validación de existencia de usuario y libros
+Reportes: visualicación del estado actual de la bilbioteca
+Registro de usuarios con validación de semestre en formato numérico
+
+MANEJO DE EXCEPCIONES IMPLEMENTADO:
+
+NumberFormatException <- ingresar texto en campo numerico
+IllegalArgumentException <- al registrar datos vacios o semestres ilógicos
+NullPointerException <- controlado ccuando se busca un usuario que no existe
+LibroNoEncontradoException <- excepción personalizadas para ISBN erroneos
+LibroNoDisponibleException <- para stock agotado
+
+ASSERTIONS
+
+Se han implementado dos aserciones clasve para le integridad de los datos
+1. Verificación que el objeto libro no sea nulo tras la búsqueda
+2. Verificación de que el stock de libros nunca sea negativo despues de un prestamo
+
+PARA EJECUTAR
+
+SE NECESITA JDK INSTALADO Y DESPUES EJECUTAR EN LA CONSOLA DEL PROYECTO:
+
+javac SistemaBiblioteca.java
